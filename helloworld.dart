@@ -1,3 +1,4 @@
-main(){
+main() {
   print('helloworld');
+  print('ew');
 }
