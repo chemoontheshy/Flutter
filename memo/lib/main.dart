@@ -7,14 +7,29 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'welcome to flutter',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: const Text("Welcome to my bar"),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Memo'),
         ),
-        body: const Center(
-          child: const Text('hello world'),
+        body: HomeCenter(),
+      ),
+      theme: ThemeData(primarySwatch: Colors.yellow),
+    );
+  }
+}
+
+class HomeCenter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'hello flutter',
+        textDirection: TextDirection.ltr,
+        style: TextStyle(
+          fontSize: 40.0,
+          color: Colors.blueAccent,
+          // color: Color.fromRGBO(233,23,323,0.3)
         ),
       ),
     );
